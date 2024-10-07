@@ -1,0 +1,9 @@
+/* css表格设置 */
+
+table, th, td {
+  border: 1px solid black;        /* 边框  表格与单元格有独立的边框 */
+  border-collapse: collapse;        /* 边框合并为一个  */
+  text-align: center;
+  vertical-align: middle;           /* 单元格内容垂直对齐方式为中间 */
+  padding: 5px;                     /* 填充单元格内边距  */
+}

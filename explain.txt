@@ -1,0 +1,27 @@
+规则
+1.全部采用小写字母以及连字符
+2.要引用子目录中的文件，请在路径前面写上目录名，再加上一个正斜杠。例如：subdirectory/my-image.jpg
+
+网站结构
+1.index.html：这个文件一般会包含主页内容，也就是人们第一次进入网站时看到的文字和图片
+2.images 文件夹：这个文件夹包含网站上使用的所有图片
+3.styles 文件夹：这个文件夹包含用于设置内容样式的 CSS 代码（例如，设置文本和背景颜色）
+4.scripts 文件夹：这个文件夹包含所有用于向网站添加交互功能的 JavaScript 代码（例如，点击时加载数据的按钮）
+
+vue + vite
+1.确保node.js与nvm已安装
+2.目标目录下终端运行npm i命令
+3.用vite官网中的参考命令以npm安装vite + vue
+
+router路由配置挂载
+1.在src目录下创建router文件夹，并在其中创建index.js文件
+2.在index.js文件中导入vue-router和各个路由对应的组件路径（.vue文件路径）
+3.在index.js中创建配置路由数组routes，并配置路径与对应组件
+4.在index.js中使用createRouter方法创建路由实例，并配置路由数据并在APP.vue的<template>标签中写入<router-view />
+6.在main.js中导入router文件并用createApp方法创建Vue实例，挂载到Vue实例上
+
+element-plus按需引入
+1.npm install element-plus --save
+2.npm install -D unplugin-vue-components unplugin-auto-import
+3.在vite.config.js中配置unplugin-vue-components与unplugin-auto-import
+4.重启vite服务

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- css选择器四种方式 -->
+    <!-- 标签选择器 > id选择器 > class选择器 > 组合选择器 -->
+
+    <!-- 1.id选择器  以#开头，选择id为id-select的元素 -->
+    <style>
+        #id-select {
+            background-color: #f2f2f2;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+
+    <!-- 2.class选择器  以.开头，选择class为class-select的元素 -->
+    <style>
+        .class-select {
+            background-color: #f70101;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 20px;
+            cursor: pointer;
+        }
+        .class-size {
+            font-size: 18px;
+        }
+        /* 为选择该样式元素内的子元素(p)指定样式 */
+        .class-color p {
+            color: #00ff44;
+        }
+    </style>
+
+    <!-- 3.组合选择器  选择特定h1元素的class为class-select的元素 -->
+    <style>
+        h1.class-select {
+            background-color: #00bfff;
+            color: #5ceb03;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="class-color">
+    <p id="id-select">123</p>
+    <!-- 多个class用空格隔开 -->
+    <p class="class-select class-size">456</p>
+
+    <h1 class="class-select">789</h1>
+
+    <!-- 4.属性选择器  选择特定属性的元素 -->
+    <p style="color: antiquewhite; background-color: black;">123456789</p>
+</body>
+</html>

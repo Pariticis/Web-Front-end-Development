@@ -1,0 +1,5 @@
+name属性插件安装：
+1.npm i vite-plugin-vue-setup-extend -D
+2.在vite.config.js中配置：
+   a.引入vite-plugin-vue-setup-extend：
+   b.plugins函数中添加引入的函数

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>猜字游戏</title>
+
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        body {
+            width: 50%;
+            max-width: 800px;
+            min-width: 480px;
+            margin: 0 auto;
+        }
+
+        .form input[type="number"] {
+            width: 200px;
+        }
+
+        .lastResult {
+            color: white;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Number guessing game</h1>
+
+    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you
+        if your guess was too high or too low.</p>
+
+    <div class="form">
+        <label for="guessField">Enter a guess: </label>
+        <input type="number" min="1" max="100" required id="guessField" class="guessField">
+        <input type="submit" value="Submit guess" class="guessSubmit">
+    </div>
+
+    <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+    </div>
+
+    <script>
+
+        let randomNum = Math.floor(Math.random()) * 100 + 1;          //得到1到100之间的随机数  赋值给randomNum
+
+        const guesses = document.querySelector('.guesses');           //获取元素 guesses
+        const lastResult = document.querySelector('.lastResult');     //获取元素 lastResult
+        const lowOrHi = document.querySelector('.lowOrHi');           //获取元素 lowOrHi
+
+        const guessField = document.querySelector('.guessField');
+        const guessSubmit = document.querySelector('.guessSubmit');
+
+        let guessCount = 1;    //记录猜测次数并初始化为1
+        let resetButton;       //记录重置按钮元素
+
+        function checkGuess() {
+            const userGuess = Number(guessField.value);     //获取用户输入的猜测值
+            if (guessCount === 1) {
+                guesses.textContent = "Previous guesses: ";
+            }
+            guesses.textContent += `${userGuess} `;         //userGuess追加到guesses元素的文本末尾 并添加空格
+
+            if (userGuess === randomNum) {                  //如果猜测值与随机数相等
+                lastResult.textContent = "Congratulations! You got it right!";
+                lastResult.style.backgroundColor = "green";
+                lowOrHi.textContent = "";                   //清空lowOrHi元素的文本内容
+                setGameOver();                              //游戏结束 
+            } else if (guessCount === 10) {                 //猜测次数达到10次
+                lastResult.textContent = "!!!GAME OVER!!!";
+                lowOrHi.textContent = "";
+                setGameOver();
+            } else {                                        //猜测值与随机数不相等
+                lastResult.textContent = "Wrong!";
+                lastResult.style.backgroundColor = "red";
+                if (userGuess < randomNum) {             //如果猜测值小于随机数
+                    lowOrHi.textContent = "Last guess was too low!";
+                } else if (userGuess > randomNum) {
+                    lowOrHi.textContent = "Last guess was too high!";
+                }
+            }
+
+            guessCount++;                                   //猜测次数加1
+            guessField.value = "";                          //清空输入框内容
+            guessField.focus();                             //将光标移到输入框
+        }
+
+        guessSubmit.addEventListener('click', checkGuess);   //绑定点击事件
+
+        function setGameOver() {
+            guessField.disabled = true;                       //禁用输入框
+            guessSubmit.disabled = true;                      //禁用提交按钮
+            resetButton = document.createElement('button');   //创建重置按钮元素
+            resetButton.textContent = "Play again";           //设置按钮文本
+            resetButton.addEventListener('click', resetGame); //绑定点击事件
+            document.body.appendChild(resetButton);           //将按钮添加到body元素末尾
+        }
+
+        function resetGame() {
+            guessCount = 1;                                  //重置猜测次数
+            guessField.disabled = false;                     //启用输入框
+            guessSubmit.disabled = false;                    //启用提交按钮
+            resetButton.parentNode.removeChild(resetButton); //移除重置按钮元素
+            guesses.textContent = "Previous guesses: ";      //清空guesses元素的文本内容
+            lastResult.textContent = "";                     
+            lowOrHi.textContent = "";                        
+            guessField.value = "";                           
+            guessField.focus();                              
+        }
+
+    </script>
+</body>
+
+</html>

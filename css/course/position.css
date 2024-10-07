@@ -1,0 +1,39 @@
+/* css定位设置 */
+
+/* 定位类型 */
+/* static：默认值  没有定位  元素出现在正常的流中 */
+div.static {
+  position: static;
+  border: 1px solid black;
+}
+
+/* relative：相对定位  相对于元素原本的正常位置进行定位 */
+div.relative {
+  position: relative;
+  left: 100px;
+}
+
+/* absolute：绝对定位  相对于最近的已定位的祖先元素进行定位  可放到页面上任何位置*/
+div.absolute {
+  position: absolute;
+}
+
+/* fixed：固定定位  相对于浏览器窗口进行定位  即使页面滚动也不会移动 */
+div.fixed {
+  position: fixed;
+}
+
+/* sticky：粘性定位  相对于最近的已定位的父元素进行定位  当元素在屏幕范围外时  元素会被固定在顶部或底部 */
+div.sticky {
+  position: sticky;
+  top: 0;
+}
+
+/* 重叠层叠顺序 */
+/* z-index：设置元素的重叠顺序  默认为0  可为负数  越大越在顶层 */
+img {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}

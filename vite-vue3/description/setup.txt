@@ -1,0 +1,14 @@
+原始写法：
+<script>
+export default {
+    setup() {
+
+      return {}
+    }
+}
+</script>
+
+推荐写法：
+<script setup>
+
+</script>

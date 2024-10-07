@@ -1,0 +1,22 @@
+/* css外部样式表 */
+
+body {
+  background-attachment: fixed;
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1 {
+    color: #52a103;
+    font-size: 20px;
+    text-size-adjust: 100%;
+}
+
+p {
+  text-align: center;
+  color: aqua;
+  background-color: blanchedalmond;
+  margin-bottom: 1em;
+}
