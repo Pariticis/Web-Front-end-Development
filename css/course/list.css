@@ -1,0 +1,25 @@
+/* css列表设置 */
+
+/* 无序列表 */
+ul {
+  list-style-type: armenian;   /* 列表项符号 */  
+  list-style-position: inside; /* 列表项符号位置 */
+  list-style-image: none;      /* 列表项符号图片 */
+
+  list-style: armenian inside none; /* 三项按顺序设置  没有可忽略 */
+}
+
+li {
+  margin-bottom: 10px;         /* 列表项之间的间距 */
+  padding: 5px;                /* 列表项内容与符号之间的间距 */
+  margin: auto;                /* 列表项水平居中 */
+}
+
+/* 对无序列表中的所有列表项进行设置 */
+ul li {
+    background-image: url(images/icon.png);    /* 列表项符号图片 */
+    background-color: #f2f2f2;               /* 列表项背景色 */
+    background-position: 0% 50%;               /* 列表项符号位置 */
+    background-repeat: no-repeat;              /* 列表项符号不重复 */
+    background-size: 20px;                     /* 列表项符号大小 */
+}

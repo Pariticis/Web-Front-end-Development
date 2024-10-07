@@ -1,0 +1,80 @@
+/* css对齐设置 */
+
+/* 元素居中对齐 */
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  border: 3px solid #73AD21;
+}
+
+/* 文本居中对其 */
+.text-center {
+  text-align: center;
+  border: 1px solid #ffa602;
+}
+
+/* 图片居中对齐 */
+.img-center {
+  display: block;  /* 使图片充满整个容器  块级元素  */
+  margin: 0 auto;
+  width: 50%;
+}
+
+/* 行内元素居中对齐 */
+.inline-center {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #008CBA;
+}
+
+/* 左右对齐 */
+/* 使用float属性或position属性 */
+.left {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  border: 3px solid #f44336;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  padding: 10px;
+  border: 3px solid #4CAF50;
+}
+
+/* 垂直居中 */
+/* 使用flex布局 */
+.vertical-center1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border: 1px solid #e7e7e7;
+}
+
+/* 使用padding定位 */
+.vertical-center2 {
+  padding: 100px 0;
+  border: 1px solid #e7e7e7;
+}
+
+/* 使用line-height */
+/* 父元素设置line-height为子元素高度，子元素设置height为100% */
+/* 单行文本 */
+.vertical-center3 {
+  line-height: 100px;
+  height: 100px;
+  border: 1px solid #e7e7e7;
+}
+
+/* 多行文本 */
+.vertical-center4 {
+  line-height: 100px;
+  height: 100px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #e7e7e7;
+}

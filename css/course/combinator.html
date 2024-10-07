@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator</title>
+    <style>
+        /* 后代选择器 空格隔开 */
+        div p1 {
+            background-color: yellowgreen;
+        }
+        /* 子代选择器 > 只作用于一级子元素 */
+        div > p2 {
+            background-color: yellow;
+        }
+        /* 相邻兄弟选择器 + 相同父元素 相邻元素起效 */
+        div + p3 {
+            background-color: orange;
+        }
+        /* 通用兄弟选择器 ~ 后续所有元素起效 */
+        div ~ p4 {
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div><p1>后代选择器</p1></div>
+    <p1>后代选择器</p1>
+    <br>
+
+    <div><p2>子代选择器</p2></div>
+    <div><span><p2>子代选择器</p2></span></div>
+    <br>
+
+    <div><p3>相邻兄弟选择器</p3></div>
+    <p3>相邻兄弟选择器</p3>
+
+    <div><p4>通用兄弟选择器</p4></div>
+    <p4>通用兄弟选择器</p4><br>
+    <p4>通用兄弟选择器</p4>
+</body>
+</html>

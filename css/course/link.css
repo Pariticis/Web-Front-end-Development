@@ -1,0 +1,18 @@
+/* css链接设置 */
+
+/* 链接顺序：未访问、已访问、鼠标悬停、激活 */
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: green;
+}

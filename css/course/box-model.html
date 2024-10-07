@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+
+    <!-- css class选择器 -->
+    <!-- 盒子模型采用div元素设计 -->
+    <!-- 盒子模型包括边框  内边距  外边距  宽度  高度 -->
+    <style>
+        div.example {
+            border: 2px solid black;  /* 边框宽度  样式（实线）  颜色 */
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            height: 200px;
+        } 
+    /* 总宽度 = 宽度 + 左右内填充 + 左右边框 + 左右外边距 */
+    /* 总高度 = 高度 + 上下内填充 + 上下边框 + 上下外边距 */
+
+        td {
+            background-color: rgb(93, 0, 255);
+        }
+
+        /* 图片轮廓 */
+        img {
+            outline: green solid 2px;
+        }
+    </style>
+</head>
+<body>
+    <table border="0.1" text-align="center">
+        <tr>
+            <td><img src="../site/images/ABB IRB 120.png" alt="ABB IRB 120" width="244" height="244"></td>
+        </tr>
+    </table>
+    <div class="example" style="text-align: center;">盒子模型</div>
+</body>
+</html>

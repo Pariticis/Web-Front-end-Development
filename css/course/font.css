@@ -1,0 +1,16 @@
+/* css字体设置 */
+
+/* 百分比与em相结合  1em=16px */
+body {
+    font-family: "Microsoft YaHei", Arial, sans-serif;  /* 设置字体系列 */
+    font-size: 100%;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+p {
+
+    font-size: 1.2em;
+}

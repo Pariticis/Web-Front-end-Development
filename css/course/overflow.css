@@ -1,0 +1,13 @@
+/* css溢出设置 */
+
+div.flow {
+  overflow: scroll; /* 内容溢出  会产生滚动条以查看溢出内容 */
+}
+
+div.hidden {
+  overflow: hidden; /* 内容溢出会被隐藏 */
+}
+
+div.visible {
+  overflow: visible; /* 内容溢出到元素之外 */
+}

@@ -1,0 +1,27 @@
+/* css显示设置 */
+
+/* 隐藏元素  占用空间也会被删除 */
+p.display {
+    display: none;
+}
+
+/* 隐藏元素  占用空间不会被删除 */
+p.visibility {
+    visibility: hidden;
+}
+
+/* 更改元素类型 */
+/* inline 内联元素  不能有宽高  自动换行 */
+p.inline {
+    display: inline;
+}
+
+/* block 块级元素  有宽高  不自动换行 */
+span.block {
+    display: block;
+}
+
+/* inline-block 内联块级元素  既有宽高  又可以自动换行 */
+div.inline-block {
+    display: inline-block;
+}

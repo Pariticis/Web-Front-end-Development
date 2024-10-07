@@ -1,0 +1,12 @@
+/* css文本设置 */
+
+body {
+    text-align: justify;           /* 对齐方式  两端对齐 */
+    text-indent: 2em;              /* 首行缩进 */
+    text-justify: inter-word;      /* 单词之间添加换行符 */
+    text-transform: capitalize;    /* 首字母大写 */
+    text-decoration: none;         /* 去除下划线 */
+
+    letter-spacing: normal;        /* 字符间距 */
+    word-spacing: normal;          /* 单词间距  对中文不起作用 */
+}

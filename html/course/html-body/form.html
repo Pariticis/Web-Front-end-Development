@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 表单 -->
+    
+    <!-- action属性指定表单提交的地址，method属性指定提交方式为POST -->
+    <form action="/" method="post">
+        <!-- 文本输入框 -->
+        <!-- required属性表示必填 -->
+        <!-- for属性用于关联label元素 -->
+        <!-- type属性指定输入框类型为text，id属性用于标识元素，name属性用于提交表单数据 -->
+        <label for="name">用户名:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <br>
+    
+        <!-- 密码输入框 -->
+        <!-- type属性指定输入框类型为password -->
+        <label for="password">密码:</label>
+        <input type="password" id="password" name="password" required>
+    
+        <hr>
+        <br>
+    
+        <!-- 单选按钮 -->
+        <!-- 同一组单选按钮的name属性必须相同 -->
+        <label>性别:</label>
+        <!-- checked属性表示默认选中 -->
+        <!-- value属性表示提交到服务器时的值 -->
+        <!-- type属性指定输入框类型为radio -->
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">男</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">女</label>
+    
+        <hr>
+        <br>
+    
+        <!-- 复选框 -->
+        <!-- type属性指定输入框类型为checkbox -->
+        <input type="checkbox" id="subscribe" name="subscribe" checked>
+        <label for="subscribe">订阅推送信息</label>
+    
+        <hr>
+        <br>
+    
+        <!-- 下拉列表 -->
+        <label for="country">国家:</label>
+        <select id="country" name="country">
+            <option value="cn" selected>CN</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+        </select>
+    
+        <br>
+    
+        <!-- 提交与重置按钮 -->
+        <input type="submit" value="提交">
+        <input type="reset" name="button" id="button" value="重置">
+    </form>
+</body>
+</html>

@@ -1,0 +1,10 @@
+/* css背景设置*/
+
+body {
+  background-color: #f2f2f2;
+  background-attachment: fixed;  /*背景图像设置为固定*/
+  background-position: center;   /*背景图像位置居中*/
+  background-repeat: no-repeat;  /*背景图像不重复  可设置为水平或垂直平铺  repeat-x repeat-y*/
+  background-size: cover;        /*背景图像适应容器大小*/
+  background-image: url('ABB IRB 120.png');
+}

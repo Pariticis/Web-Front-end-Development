@@ -1,0 +1,9 @@
+/* css外边距设置 */
+
+p.margin {
+  margin: 10px 10px 10px 10px; /* 外上下左右边距均为10px */
+}
+
+p.padding {
+  padding: 10px 10px 10px 10px; /* 内上下左右边距均为10px */
+}
