@@ -1,4 +1,4 @@
-<!-- 监视ref基本类型对象value值的变化 -->
+<!-- 监视ref基本类型数据的value值的变化 -->
 <script setup lang="ts">
 import {ref,watch} from 'vue'
 

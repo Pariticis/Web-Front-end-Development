@@ -38,6 +38,7 @@ function changeCar() {
         <h1>{{ name }} {{ age }} {{ num }}</h1>
         <h2>{{ car.car }} {{ car.price }}</h2>
         <h3>{{ car2.car }} {{ car2.price }}</h3>
+        <!-- @:v-on 监听DOM事件 -->
         <button @click="changeName()">改名</button>
         <button @click="changeAge()">加1岁</button>
         <button @click="showNum()">显示num</button>
@@ -46,4 +47,6 @@ function changeCar() {
     </div>
 </template>
 
-<style scoped></style>
+<!-- scoped局部样式  用于当前组件 -->
+<style scoped>
+</style>
