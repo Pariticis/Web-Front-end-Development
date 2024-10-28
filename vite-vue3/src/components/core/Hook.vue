@@ -20,6 +20,10 @@ const { dogList, getDog } = useDog()
 </template>
 
 <style scoped>
+button {
+    background-color: rgb(167, 234, 225);
+    text-align: center;
+}
 .img {
     width: auto;
     height: auto;
