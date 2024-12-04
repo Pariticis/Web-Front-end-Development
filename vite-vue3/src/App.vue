@@ -14,12 +14,16 @@
 // import Life_cycle from './components/Life_cycle.vue'
 // import Hook from './components/core/Hook.vue'
 
-import { RouterLink,RouterView } from 'vue-router'
+// import { RouterLink,RouterView } from 'vue-router'
 
+import Count from './components/pinia/Count.vue'
 </script>
 
 <!-- vue根组件 所有子组件的父组件 -->
 <template>
+  <div>
+    <Count />
+  </div>
   <!-- 路由测试 -->
   <!-- <div>
     <p>APP.vue作为路由启动组件</p>
@@ -46,5 +50,8 @@ p {
 .button {
   margin:5px;
   border:2px solid;
+}
+h1 {
+  font-size: 20px;
 }
 </style>

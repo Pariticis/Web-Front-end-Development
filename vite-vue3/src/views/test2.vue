@@ -15,7 +15,7 @@ interface testSubject {
     title: string,
     content: string
 }
-
+console.log(testList)
 // 调出路由器
 let router = useRouter()
 
@@ -39,7 +39,7 @@ function showContent(test: testSubject) {
         <p>测试2路由</p>
         <ul>
             <li v-for="test in testList" :key="test.id">
-                <button v-on:click="showContent(test)">显示内容</button>
+                <!-- <button v-on:click="showContent(test)">显示内容</button> -->
                 <RouterLink :to="{
                     //传递参数至子路由 子路由需使用useRoute hooks接收参数
 

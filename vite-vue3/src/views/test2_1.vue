@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { useRoute } from 'vue-router'
-import { toRefs, defineProps } from 'vue'
+import { toRefs } from 'vue'
 
 // const route = useRoute()
 // let { query } = toRefs(route)
